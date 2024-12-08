@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class EmbebedDiscord {
-    private String title,description,color;
+    private String title, description, color;
 
     public String getTitle() {
         return title;

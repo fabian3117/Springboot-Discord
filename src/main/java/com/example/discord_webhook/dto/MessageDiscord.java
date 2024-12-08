@@ -12,7 +12,7 @@ import java.util.List;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class MessageDiscord   {
+public class MessageDiscord {
     @Setter
     @JsonProperty("content")
 
@@ -20,7 +20,7 @@ public class MessageDiscord   {
 //    private String attachments;
 
     @JsonProperty("embeds")
-    private List<EmbebedDiscord> embeds=new ArrayList<>();
+    private List<EmbebedDiscord> embeds = new ArrayList<>();
 
     public String getContent() {
         return content;

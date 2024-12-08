@@ -1,6 +1,5 @@
 package com.example.discord_webhook.exceptions;
 
-import com.example.discord_webhook.service.MessageDiscordService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ControllerAdvice;
