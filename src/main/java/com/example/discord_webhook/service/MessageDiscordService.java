@@ -16,20 +16,9 @@ import java.net.URISyntaxException;
 @Service
 public class MessageDiscordService {
     @Value("${server.discord.webhook.url}")
-    private static final String url = "https://discord.com/api/webhooks/1315002879190368268/6l1o-g0He-hEQ92nLlrZt2lzScUVw8lorNxiYeP9KB7xXpZGenbOo7mKyGaVlJs39JcQ";
-
-    private static final URI uri;
+    private String url ;
+    private  URI uri;
     private final WebClient client = WebClient.builder().build();
-
-
-    static {
-        try {
-            uri = new URI(url);
-        } catch (URISyntaxException e) {
-//            log.error("Error creating URI for Discord webhook: {}", e.getMessage());
-            throw new RuntimeException(e);  // Re-throw as unchecked exception
-        }
-    }
 
     public static class DiscordSendMessageException extends RuntimeException {
         public DiscordSendMessageException(String message) {
@@ -53,8 +42,7 @@ public class MessageDiscordService {
                 .body(BodyInserters.fromValue(message))
                 .retrieve()
                 .bodyToMono(String.class)
-                .subscribe()
-        ;
+                .subscribe();
     }
 
 }

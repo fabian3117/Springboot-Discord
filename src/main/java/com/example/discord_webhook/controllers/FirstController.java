@@ -20,23 +20,13 @@ import java.net.URISyntaxException;
 import java.util.List;
 
 @RestController
-//@RequiredArgsConstructor
-//@AllArgsConstructor
 @Slf4j
 @ControllerAdvice
 public class FirstController {
 
     @Autowired
-    private RestTemplate restTemplate;
-    @Autowired
-    private final MessageDiscordService messageDiscordService;
-
-    public FirstController(MessageDiscordService messageDiscordService) {
-        this.messageDiscordService = messageDiscordService;
-    }
-
-    private final static String url = "https://discord.com/api/webhooks/1315002879190368268/6l1o-g0He-hEQ92nLlrZt2lzScUVw8lorNxiYeP9KB7xXpZGenbOo7mKyGaVlJs39JcQ";
-
+    private  MessageDiscordService messageDiscordService;
+    /*
     @PostMapping("/enviarDatos")
     public String enviarDatos(@RequestBody MessageDiscord mensaje) throws URISyntaxException {
 
@@ -58,6 +48,7 @@ public class FirstController {
         return "";
     }
 
+     */
     @PostMapping("/repply")
     public void pseudoProxy(@RequestBody @NonNull MessageDiscord mensaje) throws URISyntaxException {
 

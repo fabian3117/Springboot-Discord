@@ -13,7 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class MessageDiscord {
-    @Setter
+
     @JsonProperty("content")
 
     private String content;
